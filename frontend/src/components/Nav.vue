@@ -16,10 +16,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <router-link class="nav-link active" aria-current="page" href="#">首页</router-link>
-            <router-link class="nav-link" href="#">Features</router-link>
-            <router-link class="nav-link" href="#">Pricing</router-link>
-            <router-link class="nav-link disabled">Disabled</router-link>
+            <router-link class="nav-link active" aria-current="page" :to="'/'">首页</router-link>
+            <router-link class="nav-link" :to="'/about'">关于</router-link>
           </div>
         </div>
       </div>
