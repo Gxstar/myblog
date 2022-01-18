@@ -1,20 +1,35 @@
 <template>
   <div class="container-md">
-    <button type="button" class="btn btn-primary">Primary</button>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="my-navbar">
+      <Nav />
     </div>
-    <router-view />
+    <div class="my-body">
+      <router-view />
+      <RightBar />
+    </div>
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Nav from '@/components/Nav.vue'
+import RightBar from '@/components/RightBar.vue'
+
+export default {
+  name:'App',
+  components:{
+    Nav,
+    RightBar
+  }
+}
+</script>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 
