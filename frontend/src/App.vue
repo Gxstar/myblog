@@ -1,5 +1,5 @@
 <template>
-  <div class="container-md">
+  <div class="container-md my-con">
     <div class="my-navbar">
       <Nav />
     </div>
@@ -32,5 +32,11 @@ export default {
   /* text-align: center; */
   color: #2c3e50;
 }
+.my-con{
+  padding-top: 3rem;
+}
+</style>
+
+<style scoped>
 
 </style>

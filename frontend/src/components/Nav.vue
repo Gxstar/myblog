@@ -16,25 +16,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <router-link class="nav-link active" aria-current="page" :to="'/'"
+            <router-link class="nav-link" :to="'/'"
               >首页</router-link
             >
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                分类
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><router-link class="dropdown-item" :to="'/note'">学习笔记</router-link></li>
-                <li><router-link class="dropdown-item" :to="'/thought'">所想所感</router-link></li>
-              </ul>
-            </li>
+            <router-link
+              v-for="cat in cats"
+              :key="cat.id"
+              class="nav-link"
+              :to="'/cats/' + cat.id"
+              >{{ cat.name }}</router-link
+            >
             <router-link class="nav-link" :to="'/about'">关于</router-link>
           </div>
         </div>
@@ -47,6 +38,14 @@
 export default {
   name: "Nav",
   props: {},
+  data() {
+    return {
+      cats: [
+        { id: 1, name: "学习笔记" },
+        { id: 2, name: "所想所感" },
+      ],
+    };
+  },
 };
 </script>
 

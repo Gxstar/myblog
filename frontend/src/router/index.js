@@ -18,10 +18,6 @@ const routes = [
   {
     path: '/cats/:catid',
     name: 'Cats',
-    
-  },
-  {
-
   }
 ]
 
