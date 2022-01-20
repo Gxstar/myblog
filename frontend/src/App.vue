@@ -25,15 +25,21 @@ export default {
 </script>
 
 <style>
+html{
+  background-color: #eef0f1;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
+  background-color: #eef0f1;
 }
 .my-con{
-  padding-top: 3rem;
+  margin-top: 3rem;
+  background-color: white;
+  border-radius: 5px;
 }
 .my-body{
   padding: 15px;
