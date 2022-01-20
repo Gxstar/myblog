@@ -3,9 +3,9 @@
     <div class="my-navbar">
       <Nav />
     </div>
-    <div class="my-body">
-      <router-view />
-      <RightBar />
+    <div class="my-body row">
+      <router-view class="col-md-8 col-12" />
+      <RightBar class="col-md-4 col-12" />
     </div>
   </div>
 </template>
@@ -34,6 +34,9 @@ export default {
 }
 .my-con{
   padding-top: 3rem;
+}
+.my-body{
+  padding: 15px;
 }
 </style>
 
