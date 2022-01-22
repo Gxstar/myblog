@@ -3,7 +3,7 @@
     <div class="my-navbar">
       <Nav />
     </div>
-    <div class="my-body row">
+    <div class="my-body row gx-10">
       <router-view class="col-md-8 col-12" />
       <RightBar class="col-md-4 col-12" />
     </div>
@@ -40,12 +40,34 @@ html{
   margin-top: 3rem;
   background-color: white;
   border-radius: 5px;
+  padding-top: 1.5rem;
 }
 .my-body{
   padding: 15px;
 }
-</style>
-
-<style scoped>
-
+.nav-link{
+  padding: 10px !important;
+  border-radius: 5px;
+  margin:5px 10px;
+}
+.nav-link:hover{
+  background-color: var(--bs-blue);
+  color:white !important;
+}
+.router-link-exact-active{
+  background-color: var(--bs-blue);
+  color:white !important;
+}
+@media screen and (max-width:768px) {
+  .my-con{
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .my-navbar{
+    border-bottom: 1px solid lightgray;
+  }
+  .nav-link{
+    margin:5px 0;
+  }
+}
 </style>

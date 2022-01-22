@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="right-bar">
         This is RightBar
     </div>
 </template>
@@ -10,3 +10,10 @@ export default {
     props: {},
 }
 </script>
+
+<style scoped>
+.right-bar{
+    padding-left:10px;
+    border-left:1px solid lightgray;
+}
+</style>
