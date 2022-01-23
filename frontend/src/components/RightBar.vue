@@ -1,5 +1,5 @@
 <template>
-    <div class="right-bar">
+    <div class="right-bar border-start">
         This is RightBar
     </div>
 </template>
@@ -14,6 +14,5 @@ export default {
 <style scoped>
 .right-bar{
     padding-left:10px;
-    border-left:1px solid lightgray;
 }
 </style>
