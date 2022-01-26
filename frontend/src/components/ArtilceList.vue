@@ -9,11 +9,13 @@
             alt=""
             loading="lazy"
             class="img-thumbnail"
+            style="max-height: calc(70vw);"
           />
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12" :class="{'col-md-7':post.hasCover}">
           <header><h5>{{ post.title }}</h5></header>
           <p class="fs-6 fw-light my-text-cut">{{ post.text }}</p>
+          <div class="align-items-end"><p class="text-end">更多</p></div>
         </div>
       </article>
     </section>
@@ -56,18 +58,18 @@ export default {
   padding: 15px 25px 15px 5px;
   letter-spacing: 1.25px;
 }
-.list-body::after{
+/* .list-body::after{
   content:'';
   width:100%;
   height:1px;
   background-color: lightgray;
   position: relative;
   top: 1.5rem;
-}
+} */
 .my-text-cut{
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 5;
   overflow: hidden;
 }
 </style>
