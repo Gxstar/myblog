@@ -13,9 +13,9 @@
           />
         </div>
         <div class="col-12" :class="{'col-md-7':post.hasCover}">
-          <header><h5>{{ post.title }}</h5></header>
+          <header style="padding-top:0.5rem;"><h5>{{ post.title }}</h5></header>
           <p class="fs-6 fw-light my-text-cut">{{ post.text }}</p>
-          <div class="align-items-end"><p class="text-end">更多</p></div>
+          <div class="align-items-end"><p class="text-end"><router-link class="non-link" :to="'/posts/'+post.id">更多</router-link></p></div>
         </div>
       </article>
     </section>
@@ -71,5 +71,9 @@ export default {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+}
+.non-link{
+  color:var(--bs-gray-500);
+  text-decoration: none;
 }
 </style>
